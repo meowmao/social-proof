@@ -44,26 +44,20 @@ p{
     justify-content: center;
     padding: 0;
     margin: 0 auto;
-    border: 1px solid violet;
 }
 
-  
   /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 992px) {
     
     .container {
-        background: pink;
         padding: 100px;
         text-align: left;
         justify-content: space-between;
     }
-
-
   } 
   
 
 .header{
-    border: 1px solid green;
     margin-top: 80px;
     margin-bottom: 30px;
 }
@@ -72,10 +66,9 @@ p{
     color: var(--dkgraymag);
 }
 
-
   
 /*  Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 600px) { 
+  @media only screen and (min-width: 992px) { 
     .header{
         width: 450px;
         margin: 0 0 75px 0;
@@ -103,17 +96,35 @@ p{
     margin-bottom: 18px;
 }
 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width:600px) {
+    .rating {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-bottom: none;
+    }
+
+    .rating .__rate{
+        width: 30%;
+    }
+
+  } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 992px) {
     .rating{
         margin: 50px 0 0 20px;
+        display: block;
+        width: initial;
         }
 
     .rating .__rate{
         padding: 0 10px 0 10px;
         display: flex;
         align-items: center;
+        width: initial;
         }
 
     .rating .__rate .stars{
@@ -134,7 +145,6 @@ p{
         right: 125px;
         
     }
-
 } 
 
 .stars{
@@ -156,10 +166,11 @@ p{
 
 .testimonial{
     text-align: left;
+    padding: 0 15px;
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 992px) {
     .testimonial{
         display: flex;
     }
@@ -183,7 +194,7 @@ p{
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 992px) {
     .__snippet:not(:last-child){
         margin-right: 30px;
     }
@@ -209,13 +220,15 @@ p{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin:0;
+    margin: 0;
+
     grid-area: img;
 }
 
 .testimonial .__snippet .__name{
-    grid-area: name;
     margin: 0 0 0 23px;
+
+    grid-area: name;
 }
 
 .testimonial .__snippet .__verified{
@@ -228,12 +241,19 @@ p{
 .testimonial .__snippet .__notes{
     padding-top: 34px;
     margin: 0;
+
     grid-area: notes;
 }
 
 .testimonial .__snippet .__name, 
 .testimonial .__snippet .__notes{
     color: var(--white);
+}
+
+.attribution{
+    background: rgb(255, 212, 229);
+    padding: 10px;
+    margin-top: 30px;
 }
 
 
